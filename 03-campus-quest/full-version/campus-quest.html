@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Quest 2026</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header><strong>Campus Quest 2026</strong></header>
+    <main>
+      <section class="banner">
+          <h1 class="banner-text">Welcome to Campus Quest 2026!</h1>
+      </section>
+      <section class="about-the-event">
+          <!--About the Event-->
+          <h1 class="event-description-topic"><center><u>About the Event</u></center></h1>
+          <p class="event-description">
+            Campus Quest is a fun team challenge where students explore the
+            campus, solve clues, and race to complete each checkpoint. It's a
+            great way to meet new people, discover places you may not have visited
+            before, and build teamwork and problem-solving skills. Whether you're
+            a first-year student or a final-year veteran, everyone is welcome to
+            join. Form your team, register today, and get ready for an exciting
+            adventure!
+          </p>
+      </section>
+    </main>  
+    <hr>
+    <div class="registration-form">
+      <section>
+        <!--Form-->
+        <center><h1>Registration Form</h1></center>
+        <form action="" method="post">
+          <fieldset>
+            <legend>Personal Information</legend>
+            <label name="full-name" class="personal-info">
+              Full Name:
+              <input type="text" id="full-name" class="personal-info-input"/> </label
+            ><br />
+            <label name="uni-email" class="personal-info">
+              University Email:
+              <input type="email" id="uni-email" class="personal-info-input" /> </label
+            ><br />
+            <label name="phone" class="personal-info">
+              Phone Number:
+              <input type="telephone" id="phone" class="personal-info-input"   /> </label
+            ><br />
+            <label name="student-id" class="personal-info">
+              Student ID:
+              <input type="text" id="student-id" class="personal-info-input" /> </label
+            ><br />
+            <label name="password" class="personal-info">
+              Password:
+              <input type="password" id="password" class="personal-info-input"/> </label
+            ><br />
+          </fieldset>
+          <fieldset>
+            <legend>Event Choices</legend>
+            <label name="event-choice1">
+              Select One Event:<br/>
+              <label name="event-choice1" class="event-choice">
+                Workshop
+                <input type="radio" id="event-choice1"  name="event-choice1" value="event1" /></label>
+              <label name="event-choice1" class="event-choice">  
+                Treasure Hunt
+                <input type="radio" id="event-choice1" name="event-choice1" value="event2" /> </label>
+              <label name="event-choice1" class="event-choice">  
+                Talent Show
+                <input type="radio" id="event-choice1" name="event-choice1"  value="event3" /> </label>
+            </label>
+            <br/>
+            <label name="event-choice2">
+              If you have any intrests in any of the events, please select
+              it:<br />
+              <label name="event-choice2" class="event-choice">
+                Workshop
+                <input type="radio" id="event-choice2" name="event-choice2" value="event1" /> 
+              </label>
+              <label name="event-choice2" class="event-choice">  
+                Treasure Hunt
+                <input type="radio" id="event-choice2" name="event-choice2" value="event2" />
+              </label>   
+              <label name="event-choice2" class="event-choice">
+                Talent Show
+                <input type="radio" id="event-choice2" name="event-choice2" value="event3" />
+              </label>
+            </label>
+          </fieldset>
+          <fieldset>
+            <legend>Planning Details:</legend>
+            <label class="planning-detail"> Prefferd Arival Time:<input type="time" /> </label><br />
+            <label class="planning-detail"> Number of Team Members:<input type="number" /> </label
+            ><br/>
+            <label class="planning-detail"
+              >T-shirt Size:
+              <select>
+                <option>XS</option>
+                <option>S</option>
+                <option>M</option>
+                <option>L</option>
+                <option>XL</option>
+              </select>
+            </label>
+          </fieldset>
+          <fieldset>
+            <legend>About You:</legend>
+            <label class="about-you">
+              <textarea
+                placeholder="Please share any additional information about yourself and yourteam"
+              ></textarea>
+            </label>
+          </fieldset>
+          <label class="terms-condition">
+            <input type="checkbox" name="terms" value="agree" /> I agree to the
+            <a href="terms-and-conditions.html" target="_blank"
+              >terms and conditions</a
+            >
+          </label><br/>
+          <section>
+            <!--Submit & Reset-->
+            <div class="submit-reset">
+              <input type="submit" value="Submit" />
+              <input type="reset" value="Reset" /><br />
+            </div>
+          </section>
+          <section>
+            <!--Suprise Me-->
+            <div class="surprise-me">
+              <input type="button" value="Suprise ME" />
+            </div>
+          </section>
+        </form>
+      </section>    
+    </div>
+    <hr>
+    <footer><center>&copy; 2026 Campus Quest. All rights reserved.</center></footer>
+  </body>
+</html>

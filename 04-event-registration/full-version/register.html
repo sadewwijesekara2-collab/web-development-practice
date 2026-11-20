@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TechNova 2026 | Register</title>
+        <link rel="stylesheet" href="styles.css" >
+    </head>
+    <body>
+        <header>
+            <p class="logo">TechNova 2026</p>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#activities">Activities</a></li>
+                    <li><a class="active">Register</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="home" class="hero">
+                <img src="banner.jpg" alt="TechNova 2026 Banner">
+            </section>
+        
+            <div>
+                <h1 class="form-topic">Registration Form</h1>
+            
+                <form action="#" method="post" onsubmit="event.preventDefault()">
+                    <fieldset class="personal-info">
+                        <legend>Personal Information</legend>
+                        <div class="field">
+                            <label for="full-name">Full Name :</label>
+                            <input type="text" id="full-name" name="full-name" required minlength="2" maxlength="60" placeholder="e.g. Nimal Perera">
+                        </div>
+                        <div class="field">
+                            <label for="email">University Email:</label>
+                            <input type="email" id="email" name="email" required placeholder="e.g. nimalperera@gmail.com">
+                        </div>
+                        <div class="field">
+                            <label for="phone">Phone Number:</label>
+                            <input type="tel" id="phone" name="phone" required maxlength="10" pattern="0[0-9]{9}" placeholder="e.g. 0771234567"><br>
+                            <small>Format: 10 digits, no spaces or dashes</small>
+                        </div>
+                        <div class="field">
+                            <label for="institute">University/School:</label>
+                            <input type="text" id="institute" name="institute" placeholder="e.g. Richmond College">
+                        </div>     
+                    </fieldset>
+                    <fieldset class="activity">
+                        <legend>Activity</legend>
+                        <div class="field">
+                            <label for="activity">Please Select an Activity:</label>
+                            <select id="activity" name="activity" required>
+                                <option><-- Select an activity --></option>
+                                <option value="coding-challenge">Coding Challenge</option>
+                                <option value="project-exhibition">Project Exhibition</option>
+                                <option value="web-workshop">Web Development Workshop</option>
+                                <option value="tech-career-talk">Technology Career Talk</option>
+                            </select>
+                        </div>
+                    </fieldset>
+                    <fieldset class="experience-level">
+                        <legend>Experience Level</legend>
+                        <div class="field">
+                            <label for="beginner">Beginner</label>
+                            <input type="radio" id="beginner" name="experience-level" value="beginner">
+                            <label for="intermediate">Intermediate</label>                        
+                            <input type="radio" id="intermediate" name="experience-level" value="intermediate">
+                            <label for="advanced">Advanced</label>
+                            <input type="radio" id="advanced" name="experience-level" value="advanced">
+                        </div>
+                    </fieldset>
+                    <fieldset class="intrests">
+                        <legend>Interests</legend>
+                        <div class="field">
+                            <label for="programming">Programming</label>
+                            <input type="checkbox" id="programming" name="interests" value="programming">
+                            <label for="web-dev">Web Development</label>
+                            <input type="checkbox" id="web-dev" name="interests" value="web-dev">
+                            <label for="ai">AI</label>
+                            <input type="checkbox" id="ai" name="interests" value="ai">
+                            <label for="robotics">Robotics</label>
+                            <input type="checkbox" id="robotics" name="interests" value="robotics">
+                            <label for="cybersecurity">Cybersecurity</label>
+                            <input type="checkbox" id="cybersecurity" name="interests" value="cubersecurity">
+                        </div>
+                    </fieldset>
+                    <fieldset class="message">
+                        <legend>Message</legend>
+                        <div class="field">
+                            <label for="message">Tell us what you hope to learn at TechNova:</label><br>
+                            <textarea id="message" name="message" rows="4"></textarea>
+                        </div>
+                    </fieldset>
+                    <div class="confirm-info">
+                        <input type="checkbox" id="agreement" name="agreement" value="yes" required>
+                        <label for="agreement">I confirm that the information provided is correct.</label>
+                    </div>
+                    <div class="submit-btn">
+                        <input type="submit" value="Register for TechNova">
+                    </div>
+                    
+                </form>
+            </div>
+        </main>
+        
+        <footer>
+            <p>&copy;2026 TechNova</p> 
+            <p>Website Created by Sadew Wijesekara</p> 
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="register.html">Register</a>
+                <a href="mailto:hello@example.com">Contact</a>
+            </nav>
+        </footer>
+
+    </body>
+</html>

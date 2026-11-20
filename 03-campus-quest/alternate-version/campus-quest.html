@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Campus Quest 2026 - Registration</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>Campus Quest 2026</header>
+
+    <main>
+      <div class="banner" role="img" aria-label="Campus Quest banner"></div>
+
+      <section class="about-the-event">
+        <h1>About the Event</h1><!--About the Event-->
+        <p>
+          Campus Quest is our one-day university festival with workshops,
+          treasure-hunt games, and a talent show. Fill in the form below to
+          choose your activities and share the details we need to plan the day.
+        </p>
+      </section>
+
+      <section class="registration-form">
+        <h1>Registration Form</h1><!--Registration Form-->
+        <form action="#" method="post" onsubmit="event.preventDefault()">
+
+          <fieldset>
+            <legend>Personal Information</legend><!--Personal Info-->
+
+            <div class="field">
+              <label for="full-name">Full Name:</label>
+              <div class="control">
+                <input type="text" id="full-name" name="full_name"
+                  required minlength="2" maxlength="60" placeholder="e.g. Nimal Perera" />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="uni-email">University Email:</label>
+              <div class="control">
+                <input type="email" id="uni-email" name="email"
+                  required maxlength="80" placeholder="e.g. nimal@university.edu" />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="phone">Phone Number:</label>
+              <div class="control">
+                <input type="tel" id="phone" name="phone"
+                  required pattern="0[0-9]{9}" maxlength="10"
+                  placeholder="e.g. 0771234567" />
+                <span class="hint">Format: 10 digits starting with 0, no spaces.</span>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="student-id">Student ID:</label>
+              <div class="control">
+                <input type="text" id="student-id" name="student_id"
+                  required minlength="5" maxlength="12" placeholder="e.g. CS2026001" />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="password">Password:</label>
+              <div class="control">
+                <input type="password" id="password" name="password"
+                  required minlength="8" maxlength="64" />
+                <span class="hint">At least 8 characters.</span>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Event Choices</legend><!--Event Choice-->
+            <p>Select one main activity:</p>
+            <div class="choices">
+              <div class="choice">
+                <input type="radio" id="main-workshop" name="main_activity" value="workshop" required />
+                <label for="main-workshop">Workshop</label>
+              </div>
+              <div class="choice">
+                <input type="radio" id="main-treasure" name="main_activity" value="treasure-hunt" />
+                <label for="main-treasure">Treasure Hunt</label>
+              </div>
+              <div class="choice">
+                <input type="radio" id="main-talent" name="main_activity" value="talent-show" />
+                <label for="main-talent">Talent Show</label>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Extra Interests</legend><!--Extra Choice-->
+            <p>Select any additional activities you might attend:</p>
+            <div class="choices">
+              <div class="choice">
+                <input type="checkbox" id="extra-workshop" name="extra_interests" value="workshop" />
+                <label for="extra-workshop">Workshop</label>
+              </div>
+              <div class="choice">
+                <input type="checkbox" id="extra-treasure" name="extra_interests" value="treasure-hunt" />
+                <label for="extra-treasure">Treasure Hunt</label>
+              </div>
+              <div class="choice">
+                <input type="checkbox" id="extra-talent" name="extra_interests" value="talent-show" />
+                <label for="extra-talent">Talent Show</label>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Planning Details</legend><!--Planning Details-->
+
+            <div class="field">
+              <label for="arrival-time">Preferred Arrival Time:</label>
+              <div class="control">
+                <input type="time" id="arrival-time" name="arrival_time"
+                  required min="08:00" max="12:00" />
+                <span class="hint">Between 08:00 and 12:00.</span>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="teammates">Number of Teammates:</label>
+              <div class="control">
+                <input type="number" id="teammates" name="teammates"
+                  required min="0" max="5" placeholder="0 to 5" />
+                <span class="hint">You can bring up to 5 teammates.</span>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="tshirt">T-shirt Size:</label>
+              <div class="control">
+                <select id="tshirt" name="tshirt_size" required>
+                  <option value="">Select a size</option>
+                  <option value="XS">XS</option>
+                  <option value="S">S</option>
+                  <option value="M">M</option>
+                  <option value="L">L</option>
+                  <option value="XL">XL</option>
+                </select>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>About You</legend><!--About You-->
+
+            <div class="field">
+              <label for="intro">Short Introduction:</label>
+              <div class="control">
+                <input type="text" id="intro" name="intro"
+                  maxlength="100" placeholder="e.g. Second-year IT student who loves puzzles" />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="message">Message for the Organizers:</label>
+              <div class="control">
+                <textarea id="message" name="message" rows="5"
+                  maxlength="500" placeholder="Anything else we should know?"></textarea>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Agreement</legend>
+            <div class="choice">
+              <input type="checkbox" id="agree-rules" name="agree_rules" value="agree" required />
+              <label for="agree-rules">I agree to the event rules.</label>
+            </div>
+          </fieldset>
+
+          <div class="buttons"><!--Submit,Reset,Surprise ME-->
+            <input type="submit" value="Submit" />
+            <input type="reset" value="Reset" />
+            <input type="button" id="surprise" value="Surprise me" />
+          </div>
+          <p id="surprise-message" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer>&copy; 2026 Campus Quest. All rights reserved.</footer>
+
+    <script>
+      // Optional challenge: pick a random main activity
+      document.getElementById("surprise").addEventListener("click", function () {
+        var choices = [
+          { id: "main-workshop", text: "Your quest begins at the workshop!" },
+          { id: "main-treasure", text: "Your quest begins at the treasure hunt!" },
+          { id: "main-talent", text: "Your quest begins at the talent show!" }
+        ];
+        var pick = choices[Math.floor(Math.random() * choices.length)];
+        document.getElementById(pick.id).checked = true;
+        document.getElementById("surprise-message").textContent = pick.text;
+      });
+    </script>
+  </body>
+</html>

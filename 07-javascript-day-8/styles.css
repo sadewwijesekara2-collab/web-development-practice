@@ -1,0 +1,44 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.siteTitle{
+    text-align: center;
+    padding: 1.2rem;
+}
+.informationSection{
+    text-align: center;
+    margin-left: 25vw;
+    margin-top: 10vh;
+    
+}
+.inputTile{
+    display: grid;
+    grid-template-columns: 20% 1fr;
+    align-items: center;
+    margin-bottom: 5vh;
+    /* margin: 15px 0; */
+}
+.inputTile input,.inputTile select{
+    margin-right: 15vw;
+    width: 30vw;
+}
+.inputTile select{
+    text-align: center;
+}
+#RegisterButton{
+    text-align: center;
+    
+    
+}
+#registerStudentButton{
+    background-color: aqua;
+    
+    height: 50px;
+    width: 70px;
+    border: none;
+}
+/* .buttons{
+
+} */

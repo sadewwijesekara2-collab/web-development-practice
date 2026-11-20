@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!-- Root element. lang="en" tells browsers and screen readers the page is in English -->
+<html lang="en">
+    <head>
+        <!-- Character encoding: UTF-8 makes all text and symbols display correctly -->
+        <meta charset="UTF-8">
+        <!-- Viewport: makes the page fit the screen width on phones and tablets -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Page title shown in the browser tab -->
+        <title>TechNova 2026 | Register</title>
+        <!-- Connects the shared CSS file (both pages use the same styles.css) -->
+        <link rel="stylesheet" href="styles.css" >
+    </head>
+    <body>
+        <!-- HEADER: the top bar that holds the logo and the navigation -->
+        <header>
+            <!-- Logo: the event name -->
+            <p class="logo">TechNova 2026</p>
+            <!-- NAVIGATION BAR -->
+            <nav class="navbar">
+                <!-- Links back to the home page and its sections, plus the current page -->
+                <ul class="nav-links">
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#activities">Activities</a></li>
+                    <!-- Current page link. class="active" lets the CSS mark it -->
+                    <li><a class="active">Register</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- MAIN: the central content of the page -->
+        <main>
+            <!-- Banner section at the top of the page -->
+            <section id="home" class="hero">
+                <!-- Banner image from the images folder, with alt text -->
+                <img src="images/banner.jpg" alt="TechNova 2026 Banner">
+            </section>
+        
+            <!-- Wrapper for the page heading and the registration form -->
+            <div>
+                <!-- Page heading -->
+                <h1 class="form-topic">Registration Form</h1>
+            
+                <!-- FORM: collects the visitor's details. method is how the data is sent, action is where it goes, and onsubmit stops the page from reloading -->
+                <form action="#" method="post" onsubmit="event.preventDefault()">
+                    <!-- GROUP 1: personal information. fieldset groups related controls and legend names the group -->
+                    <fieldset class="personal-info">
+                        <legend>Personal Information</legend>
+                        <!-- Field: full name. Each label's for matches the input's id, which connects them -->
+                        <div class="field">
+                            <label for="full-name">Full Name :</label>
+                            <input type="text" id="full-name" name="full-name" required minlength="2" maxlength="60" placeholder="e.g. Nimal Perera">
+                        </div>
+                        <!-- Field: email address (type=email checks the format) -->
+                        <div class="field">
+                            <label for="email">University Email:</label>
+                            <input type="email" id="email" name="email" required placeholder="e.g. nimalperera@gmail.com">
+                        </div>
+                        <!-- Field: phone number (type=tel with a pattern that allows ten digits) -->
+                        <div class="field">
+                            <label for="phone">Phone Number:</label>
+                            <input type="tel" id="phone" name="phone" required maxlength="10" pattern="0[0-9]{9}" placeholder="e.g. 0771234567"><br>
+                            <!-- Small hint that shows the expected phone format -->
+                            <small>Format: 10 digits, no spaces or dashes</small>
+                        </div>
+                        <!-- Field: university or school (optional) -->
+                        <div class="field">
+                            <label for="institute">University/School:</label>
+                            <input type="text" id="institute" name="institute" placeholder="e.g. Richmond College">
+                        </div>     
+                    </fieldset>
+                    <!-- GROUP 2: choose an activity -->
+                    <fieldset class="activity">
+                        <legend>Activity</legend>
+                        <!-- Field: activity drop-down -->
+                        <div class="field">
+                            <label for="activity">Please Select an Activity:</label>
+                            <!-- Drop-down list. required means a choice must be made -->
+                            <select id="activity" name="activity" required>
+                                <!-- First option: the prompt shown before choosing -->
+                                <option><-- Select an activity --></option>
+                                <!-- The real choices: the text is shown to the user and the value is what gets submitted -->
+                                <option value="coding-challenge">Coding Challenge</option>
+                                <option value="project-exhibition">Project Exhibition</option>
+                                <option value="web-workshop">Web Development Workshop</option>
+                                <option value="tech-career-talk">Technology Career Talk</option>
+                            </select>
+                        </div>
+                    </fieldset>
+                    <!-- GROUP 3: experience level (radio buttons). Only one can be selected because they share the same name -->
+                    <fieldset class="experience-level">
+                        <legend>Experience Level</legend>
+                        <!-- Radio buttons with their labels -->
+                        <div class="field">
+                            <label for="beginner">Beginner</label>
+                            <input type="radio" id="beginner" name="experience-level" value="beginner">
+                            <label for="intermediate">Intermediate</label>                        
+                            <input type="radio" id="intermediate" name="experience-level" value="intermediate">
+                            <label for="advanced">Advanced</label>
+                            <input type="radio" id="advanced" name="experience-level" value="advanced">
+                        </div>
+                    </fieldset>
+                    <!-- GROUP 4: interests (checkboxes). More than one can be selected -->
+                    <fieldset class="intrests">
+                        <legend>Interests</legend>
+                        <!-- Checkboxes with their labels. Each has its own id and value -->
+                        <div class="field">
+                            <label for="programming">Programming</label>
+                            <input type="checkbox" id="programming" name="interests" value="programming">
+                            <label for="web-dev">Web Development</label>
+                            <input type="checkbox" id="web-dev" name="interests" value="web-dev">
+                            <label for="ai">AI</label>
+                            <input type="checkbox" id="ai" name="interests" value="ai">
+                            <label for="robotics">Robotics</label>
+                            <input type="checkbox" id="robotics" name="interests" value="robotics">
+                            <label for="cybersecurity">Cybersecurity</label>
+                            <input type="checkbox" id="cybersecurity" name="interests" value="cubersecurity">
+                        </div>
+                    </fieldset>
+                    <!-- GROUP 5: optional message -->
+                    <fieldset class="message">
+                        <legend>Message</legend>
+                        <!-- Field: message -->
+                        <div class="field">
+                            <label for="message">Tell us what you hope to learn at TechNova:</label><br>
+                            <!-- Multi-line text box. rows sets how tall it is -->
+                            <textarea id="message" name="message" rows="4"></textarea>
+                        </div>
+                    </fieldset>
+                    <!-- Agreement checkbox. required means it must be ticked before submitting -->
+                    <div class="confirm-info">
+                        <input type="checkbox" id="agreement" name="agreement" value="yes" required>
+                        <label for="agreement">I confirm that the information provided is correct.</label>
+                    </div>
+                    <!-- Submit button: sends the form after the browser checks the required fields -->
+                    <div class="submit-btn">
+                        <input type="submit" value="Register for TechNova">
+                    </div>
+                    
+                </form>
+            </div>
+        </main>
+        
+        <!-- FOOTER: copyright, author name and quick links (the same footer is used on both pages) -->
+        <footer>
+            <p>&copy;2026 TechNova</p> 
+            <p>Website Created by Sadew Wijesekara</p> 
+            <!-- Footer links: Home, Register and Contact -->
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="register.html">Register</a>
+                <!-- mailto: opens the visitor's email app with a fictional organiser address -->
+                <a href="mailto:hello@example.com">Contact</a>
+            </nav>
+        </footer>
+
+    </body>
+</html>

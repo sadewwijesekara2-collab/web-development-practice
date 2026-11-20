@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    background: linear-gradient(164deg, #000000 0%, #560319 100%);
+    color: aliceblue;
+}
+.site-title{
+    text-align: center;
+    padding : 1.2rem;
+}
+.personal_info,.ticket_details,.booking_summery{
+    padding : 1rem;
+    display : flex;
+    justify-content: space-around;
+}
+fieldset{
+    width: 85%;
+    max-width: 1100px;
+    border : 1px solid ;
+    padding : 0.5rem;
+    border-radius: 5px;
+    box-sizing: border-box;
+    
+}
+legend{
+    font-weight: bolder;
+    font-size: larger;
+}
+.input-tile{
+    display: grid;
+    grid-template-columns: 20% 1fr;
+    align-items: center;
+    margin: 15px 0;
+    
+}
+.input-tile label{
+    margin-left: 2.5vw;
+    margin-right: 3vw;
+}
+/* label,input,select{
+    margin : 0.5rem;
+
+} */
+input,select{
+    width: 90%;
+    margin: 0;
+    /* display : flex; */
+}
+select{
+    text-align: center;
+}
+/* .personal_info label,.ticket_details label{
+    display : flex;
+    justify-content: space-between;
+    margin-left: 3vw;
+    margin-top: 10px;
+} */
+.buttons{
+    padding : 0.8rem;
+    margin : 0.5rem;
+    border : 1px solid transparent;
+    border-radius: 5px;
+    background: linear-gradient(159deg, #0F0F0F 0%, #660033 100%);
+    color : azure;
+}
+#submit_button:enabled:hover,#verify_button:hover {
+    color : rgb(169, 14, 14);
+    background: linear-gradient(164deg, #000000 0%, #560319 100%);
+    border : 1px solid rgb(169, 14, 14);
+
+}
+.button_section{
+    text-align: center;
+}
+
+.error-msg{
+    grid-column: 2;
+    color: red;
+    font-size: smaller;
+    margin: 2px 0 0;
+    
+}
+#submit_button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+#submit_button:enabled,#verify_button {
+    cursor: pointer;
+}

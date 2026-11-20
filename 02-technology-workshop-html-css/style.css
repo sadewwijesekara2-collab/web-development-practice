@@ -1,0 +1,135 @@
+body{
+    background-color: #0f172a;
+    color:#e2e8f0; 
+    font-size: 20px;
+    
+}
+header {
+    background-color: #0c1221;
+    color: #e2e8f0;
+    padding: 20px;
+    display: flex;
+    font-size: 30px;
+    justify-content: space-between;
+}
+nav ul {
+  list-style: none;
+  display: flex;      
+  gap: 80px;
+  margin: 0;
+  padding: 0;
+
+}
+nav a{
+    text-decoration: none;
+    color: #e2e8f0;
+}
+nav ul li{
+    margin-right: 10px;
+    font-size: 20px;
+}
+.enroll {
+  background-image: url("images/event-banner.jpg");
+  background-size: cover;
+  height: 300px;
+  background-position: center; 
+  position: relative;
+  overflow: hidden;
+  color: #e2e8f0;
+  padding: 20px;
+  text-align: center;
+}
+.event-highlights a {
+    text-decoration: none;
+    color: #e2e8f0;
+}
+.enroll-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+
+  background: rgba(15, 23, 42, 0.75); 
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.enroll:hover .enroll-content {
+  opacity: 1;
+}
+
+.enroll-content h1 {
+  color: #ffffff;
+  font-size: 32px;
+  margin: 0;
+}
+
+.enroll-button {
+  padding: 12px 28px;
+  background: #22d3ee;
+  color: #0f172a;
+  border: none;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.enroll-button:hover {
+  background: #67e8f9;
+}
+.activities img{
+    height: 600px;
+    width: 100%;
+    object-fit: contain;
+}
+footer{
+    align-items: center;
+    text-align: center;
+}
+.home-page-button{
+    background-color: #080c16;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.home-page-button a{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+}
+th,td{
+    padding: 12px 24px;
+}
+.event-location-paragraph{
+    display: flex;
+    width: 40%;
+    float: left;
+}
+.event-location-image{
+    display: flex;
+    width: 40%;
+    height: 300px;
+    float: right;
+    object-fit: contain;
+}
+.chief-guest-paragraph{
+    width: 60%;
+    height: 300px;
+    float: left;
+}
+.chief-guest-image{
+    display: flex;
+    height: 300px;
+    float: right;
+    object-fit: contain;
+}

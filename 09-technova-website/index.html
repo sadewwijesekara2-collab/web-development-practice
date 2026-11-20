@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<!-- Root element. lang="en" tells browsers and screen readers the page is in English -->
+<html lang="en">
+    <head>
+        <!-- Character encoding: UTF-8 makes all text and symbols display correctly -->
+        <meta charset="UTF-8">
+        <!-- Viewport: makes the page fit the screen width on phones and tablets -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Page title shown in the browser tab -->
+        <title>TechNova 2026 | Home</title>
+        <!-- Connects the shared CSS file (both pages use the same styles.css) -->
+        <link rel="stylesheet" href="styles.css" >
+    </head>
+    <body>
+        <!-- HEADER: the top bar that holds the logo and the navigation -->
+        <header>
+            <!-- Logo: the event name -->
+            <p class="logo">TechNova 2026</p>
+            <!-- NAVIGATION BAR -->
+            <nav class="navbar">
+                <!-- Links: #home, #about and #activities jump to sections on this page; Register opens the registration page -->
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#activities">Activities</a></li>
+                    <li><a href="register.html">Register</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- MAIN: the central content of the page (the header comes before it and the footer after it) -->
+        <main>
+            <!-- HERO SECTION: the large opening area at the top of the page -->
+            <section id="home" class="hero">
+                <!-- Banner image from the images folder. The alt text describes it for screen readers -->
+                <img src="images/banner.jpg" alt="TechNova 2026 Banner">
+                <!-- Wrapper for the hero text so it can be styled together -->
+                <div>
+                    <!-- Eyebrow: a small label above the main heading -->
+                    <p class="eyebrow">University Technology Festival</p>
+                    <!-- Main heading of the page (only one h1 per page) -->
+                    <h1>TechNova 2026</h1>
+                    <!-- Intro tagline shown under the heading -->
+                    <p class="intro">Explore. Build. Create. A day of technology, innovation and ideas.</p>
+                    <!-- Event details (place, date and time) shown as a list. The id is used for special styling -->
+                    <ul id="event-details">
+                        <li>Place : University Main Hall</li>
+                        <li>Date : Saturday, December 5, 2026</li>
+                        <li>Time : 09:00 AM to 17:00 PM</li>
+                    </ul>
+                    <!-- Link styled as a button. It opens the registration page -->
+                    <a href="register.html" class="button-link">Register Now</a>
+                </div>
+            </section>
+            <!-- ABOUT SECTION: explains what the event is and why to attend -->
+            <section id="about" class="section">
+                <!-- Section label -->
+                <p class="eyebrow">About the Event</p>
+                <!-- Container that places the text and the image side by side (Flexbox in the CSS) -->
+                <div class="about-content">
+                    <!-- Left column: the about paragraph -->
+                    <div class="about-the-event-paragraph">
+                        <p>TechNova 2026 is a one-day technology festival designed to bring students together to learn, 
+                            create and share ideas. On Saturday, 5 December 2026, the University Main Hall will host coding challenges, 
+                            practical workshops, project exhibitions and talks from people working in the industry. Whether you are just starting out or already building your own projects, 
+                            you can pick up new skills, get feedback on your work and meet others who share your interests. Attending is a great way to gain confidence, discover possible career paths and turn curiosity about technology into real experience.
+                        </p>
+                    </div>
+                    <!-- Right column: the event image -->
+                    <div class="about-the-event-image">
+                        <!-- Event image from the images folder, with alt text -->
+                        <img src="images/event.jpg" alt="event-image">
+                    </div>
+                </div>
+            </section>
+            <!-- ACTIVITIES SECTION: four cards describing what happens at the event -->
+            <section id="activities" class="section">
+                <!-- Section label -->
+                <p class="eyebrow">What's Happening</p>
+                <!-- Section heading -->
+                <h2>Event Activities</h2>
+                <!-- Container that holds all four activity cards -->
+                <div class="activities">
+                    <!-- Activity card 1: Coding Challenge. All four cards reuse the same class -->
+                    <div class="activity-card">
+                        <h3>Coding Challenge</h3>
+                        <!-- Highlight label. An id must be unique, so it appears only on this card -->
+                        <p id="featured-activity">Featured Activity</p>
+                        <p>Test your problem-solving skills in a friendly, beginner-welcoming coding competition. Work through a series of short puzzles at your own pace, either alone or with a partner. No experience is needed, and everyone who takes part will learn something new.</p>       
+                    </div>
+                    <!-- Activity card 2: Project Exhibition -->
+                    <div class="activity-card">
+                        <h3>Project Exhibition</h3>
+                        <p>See what students have built in a showcase of creative technology projects. Presenters will demonstrate their apps, websites and prototypes and explain how they made them. Visitors can ask questions, give feedback and pick up ideas for their own projects.</p>
+                    </div>
+                    <!-- Activity card 3: Web Development Workshop -->
+                    <div class="activity-card">
+                        <h3>Web Development Workshop</h3>
+                        <p>Join a practical, hands-on session where you build a simple web page from scratch. You will learn how HTML and CSS work together by writing and testing code step by step. Bring a laptop and leave with a small project you can keep improving.</p>
+                    </div>
+                    <!-- Activity card 4: Technology Career Talk -->
+                    <div class="activity-card">
+                        <h3>Technology Career Talk</h3>
+                        <p>Hear from professionals who work in the technology industry about their journeys and daily work. They will share advice on skills to learn, how to find opportunities and how to get started in a tech career. There will be time for questions at the end.</p>
+                    </div>
+                </div>
+            </section>
+            <!-- SCHEDULE SECTION: the timetable for the day -->
+            <section id="schedule" class="section">
+                <h2>Event Schedule</h2>
+                <!-- Description list: each entry pairs a time (dt) with an activity (dd) -->
+                <dl>
+                    <!-- One schedule entry. Every entry reuses the same class -->
+                    <div class="schedule-item">
+                        <!-- dt = the time -->
+                        <dt>09.00 AM</dt>
+                        <!-- dd = what happens at that time -->
+                        <dd>Opening Ceremony</dd>
+                    </div>
+                    <div class="schedule-item">
+                        <dt>10.00 AM</dt>
+                        <dd>Web Development Workshop</dd>
+                    </div>
+                    <div class="schedule-item">
+                        <dt>11.30 AM</dt>
+                        <dd>Coding Challenge</dd>
+                    </div>
+                    <div class="schedule-item">
+                        <dt>12.30 PM</dt>
+                        <dd>Lunch Break</dd>
+                    </div>
+                    <div class="schedule-item">
+                        <dt>01.30 PM</dt>
+                        <dd>Project Exhibition</dd>
+                    </div>
+                    <div class="schedule-item">
+                        <dt>03.30 PM</dt>
+                        <dd>Technology Career Talk</dd>
+                    </div>
+                    <div class="schedule-item">
+                        <dt>04.30 PM</dt>
+                        <dd>Closing Ceremony</dd>
+                    </div>
+                </dl>
+            </section>
+            <!-- CALL TO ACTION: invites visitors to register -->
+            <section class="cta-section">
+                <h2>Ready to Join TechNova?</h2>
+                <p>
+                    Spaces are limited, so reserve your place today. Sign up in just a few minutes and join us for a day of coding, learning and inspiration.
+                </p>
+                <!-- Second registration button (same class as the hero button) -->
+                <a href="register.html" class="button-link">Register Now</a>
+            </section>
+        </main>
+        <!-- FOOTER: copyright, author name and quick links (the same footer is used on both pages) -->
+        <footer>
+            <p>&copy;2026 TechNova</p> 
+            <p>Website Created by Sadew Wijesekara</p> 
+            <!-- Footer links: Home, Register and Contact -->
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="register.html">Register</a>
+                <!-- mailto: opens the visitor's email app with a fictional organiser address -->
+                <a href="mailto:hello@example.com">Contact</a>
+            </nav>
+        </footer>
+
+    </body>
+</html>

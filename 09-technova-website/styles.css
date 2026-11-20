@@ -1,0 +1,286 @@
+/* RESET: applies to every element */
+*{
+    margin:0;  /* space outside the element */
+    padding:0;  /* space inside the element */
+    box-sizing: border-box;  /* width includes padding and border */
+}
+
+/* COLOR VARIABLES: change a color here and it updates everywhere var() is used */
+:root{
+  --primary: #ff5ad7;  /* pink accent color */
+  --dark: #0c1030;  /* navy for header, hero and footer */
+  --text: #1f2340;  /* normal text color */
+  --background: #f5f6ff;  /* page background */
+  --light: #ffffff;  /* white */
+}
+/* BODY: default look for the whole page */
+body{
+    font-family: Arial, sans-serif;  /* font used for the text */
+    font-size: 16px;  /* text size */
+    line-height: 1.6;  /* height of each line of text */
+    color: var(--text);  /* text color */
+    background-color: var(--background);  /* background color */
+}
+
+/* HEADER BAR: navy background with the logo on the left and links on the right */
+header{
+    background-color:var(--dark);  /* background color */
+    color:var(--light);  /* text color */
+    display:flex;  /* children sit side by side (Flexbox) */
+    justify-content: space-between;  /* how items are spaced along the row */
+    padding:1.3em;  /* space inside the element */
+}
+/* LOGO: event name */
+.logo{
+    font-size: 1.5em;  /* text size */
+    font-weight:bold;  /* how thick the text is */
+}
+/* NAVBAR: lays out the navigation in a row */
+.navbar{
+    display:flex;  /* children sit side by side (Flexbox) */
+    justify-content: space-between;  /* how items are spaced along the row */
+    align-items:center;  /* how items line up vertically */
+    flex-wrap: wrap;  /* lets items wrap onto the next line */
+    gap:1.3em;  /* space between items */
+}
+/* NAV LINKS LIST: horizontal list without bullets */
+.nav-links{
+    display:flex;  /* children sit side by side (Flexbox) */
+    list-style-type:none;  /* bullet style (none removes the bullets) */
+    gap:1.3em;  /* space between items */
+}
+/* Each link in the navigation (descendant selector: only links inside .nav-links) */
+.nav-links a{
+    
+    text-decoration:none;  /* underline style (none removes it) */
+    color:var(--light);  /* text color */
+    margin:1em;  /* space outside the element */
+    
+}
+/* HOVER: link turns pink when the mouse is over it */
+.nav-links a:hover{
+    color:var(--primary)  /* text color */
+}
+/* Banner image: fills the page width and keeps its proportions */
+.hero img{
+    width:100%;  /* element width */
+    height:auto;  /* element height (auto keeps the proportions) */
+}
+/* HERO SECTION: dark background with centered white text */
+.hero{
+    background-color: var(--dark);  /* background color */
+    color:var(--light);  /* text color */
+    text-align: center;  /* horizontal alignment of the text */
+}
+/* EYEBROW: small uppercase label above headings */
+.eyebrow{
+    text-transform: uppercase;  /* changes letter case */
+    font-size:1.6em;  /* text size */
+    font-weight: bold;  /* how thick the text is */
+    text-align: center;  /* horizontal alignment of the text */
+    margin:10px;  /* space outside the element */
+}
+/* INTRO: tagline paragraph, bigger than normal text */
+.intro{
+    font-size: 1.2em;  /* text size */
+    padding:10px;  /* space inside the element */
+}
+/* EVENT DETAILS: place, date and time list (ID selector, matches one element) */
+#event-details{
+    list-style-type: none;  /* bullet style (none removes the bullets) */
+    font-size: large;  /* text size */
+    padding:14px 20px;  /* space inside the element */
+    line-height: 1.5em;  /* height of each line of text */
+    margin-bottom: 24px;  /* space below */
+    /*border: 2px solid var(--primary);*/
+}
+/* BUTTON LINK: a link that looks like a button (used for both Register Now links) */
+.button-link{
+    display:inline-block;  /* sits in a line but accepts padding and margin */
+    text-decoration: none;  /* underline style (none removes it) */
+    padding:1.2em;  /* space inside the element */
+    background-color: var(--primary);  /* background color */
+    border: 2px solid var(--primary);  /* border line around the element */
+    color:var(--dark);  /* text color */
+    font-weight: bold;  /* how thick the text is */
+    border-radius: 10px;  /* rounded corners */
+    margin-bottom: 20px;  /* space below */
+}
+/* HOVER: button becomes transparent with pink text */
+.button-link:hover {
+    background-color: transparent;  /* background color */
+    color: var(--primary);  /* text color */
+}
+/* ABOUT: flex row, paragraph on the left and image on the right */
+.about-content{
+    display:flex;  /* children sit side by side (Flexbox) */
+}
+/* About text column */
+.about-the-event-paragraph{
+    flex:1;  /* how much space this flex item takes */
+    margin-top: 20px;  /* space above */
+    line-height: 1.2em;  /* height of each line of text */
+    letter-spacing:0.5px;  /* space between letters */
+    font-size: large;  /* text size */
+
+
+}
+
+/* Image column: takes 40% of the row and does not grow or shrink */
+.about-the-event-image{
+    flex:0 0 40%;  /* how much space this flex item takes */
+
+}
+/* The event image: fills its column, with a border and rounded corners */
+.about-the-event-image img{
+    width:100%;  /* element width */
+    height: auto;  /* element height (auto keeps the proportions) */
+    margin-top: 45px;  /* space above */
+    border:2px solid var(--dark);  /* border line around the element */
+    border-radius: 10px;  /* rounded corners */
+}
+/* SECTION: shared spacing for About, Activities and Schedule */
+.section{
+    padding:1.2em;  /* space inside the element */
+    line-height: 1.2em;  /* height of each line of text */
+}
+/* Headings inside sections */
+.section h2{
+    margin:20px;  /* space outside the element */
+    font-weight: bolder;  /* how thick the text is */
+}
+/* ACTIVITY TITLES: h3 headings inside the activities container */
+.activities h3{
+    margin-bottom: 15px;  /* space below */
+    text-decoration: underline;  /* underline style (none removes it) */
+}
+/* ACTIVITY TEXT: paragraphs styled like cards with a pink left border */
+.activity-card p{
+    margin-bottom: 10px;  /* space below */
+    font-size: large;  /* text size */
+    margin-left: 50px;  /* space on the left */
+    background-color: var(--light);  /* background color */
+    padding:10px;  /* space inside the element */
+    border-left: 4px solid var(--primary);  /* line on the left side */
+    border-radius: 6px;  /* rounded corners */
+}
+/* FEATURED LABEL: removes the extra space under the label */
+#featured-activity{
+    margin-bottom: 0px;  /* space below */
+}
+/* SCHEDULE ENTRY: time and activity side by side in a white row with a pink bar */
+.schedule-item {
+    display: flex;  /* children sit side by side (Flexbox) */
+    gap: 30px;  /* space between items */
+    padding: 12px 16px;  /* space inside the element */
+    margin-bottom: 10px;  /* space below */
+    background-color: var(--light);  /* background color */
+    border-left: 4px solid var(--primary);  /* line on the left side */
+    border-radius: 6px;  /* rounded corners */
+}
+/* The time (dt) is bold */
+.schedule-item dt{
+    font-weight: bold;  /* how thick the text is */
+}
+/* CALL TO ACTION: dark centered block near the bottom */
+.cta-section{
+    background-color: var(--dark);  /* background color */
+    color:var(--light);  /* text color */
+    text-align: center;  /* horizontal alignment of the text */
+    padding:20px;  /* space inside the element */
+}
+/* Paragraph inside the call to action */
+.cta-section p{
+    margin-bottom: 20px;  /* space below */
+    font-size: large;  /* text size */
+}
+/* FOOTER: dark bar with centered text and a thin pink line on top */
+footer{
+    text-align: center;  /* horizontal alignment of the text */
+    background-color: var(--dark);  /* background color */
+    color:var(--light);  /* text color */
+    padding: 24px 20px;  /* space inside the element */
+    border-top: 1px solid var(--primary);  /* line on the top */
+}
+/* Footer links without underline */
+footer a{
+    text-decoration: none;  /* underline style (none removes it) */
+    color: var(--light);  /* text color */
+    margin:10px;  /* space outside the element */
+}
+/* HOVER: footer links turn pink */
+footer a:hover{
+    color: var(--primary);  /* text color */
+}
+
+/* Register Form */
+
+/* REGISTRATION PAGE: page heading */
+.form-topic{
+    text-align: center;  /* horizontal alignment of the text */
+}
+/* FIELDSET: bordered box around each group of form controls */
+fieldset{
+    margin:7px 7px;  /* space outside the element */
+    padding:20px;  /* space inside the element */
+    border:1px solid var(--dark);  /* border line around the element */
+    border-radius: 5px;  /* rounded corners */
+}
+/* LEGEND: the title of each group */
+fieldset legend{
+    font-weight: bold;  /* how thick the text is */
+    padding:0 5px;  /* space inside the element */
+}
+/* Each personal-info field: label on the left and input on the right (grid) */
+.personal-info .field{
+    display:grid;  /* grid layout */
+    grid-template-columns: 240px 1fr;  /* grid columns: a fixed label column and a flexible input column */
+    gap:10px;  /* space between items */
+    align-items:start;  /* how items line up vertically */
+    margin-bottom: 7px;  /* space below */
+}
+/* Small format hint under an input */
+.field small{
+    margin-top:0;  /* space above */
+    padding:0;  /* space inside the element */
+    display:block;  /* takes its own line */
+}
+/* INPUTS: shared width, padding and alignment for text boxes, drop-down and textarea (grouped selector) */
+.personal-info input,.activity select ,.message textarea{
+    width:100%;  /* element width */
+    padding:6px;  /* space inside the element */
+    text-align: center;  /* horizontal alignment of the text */
+}
+/* Space after each radio button so the options are spread out */
+.experience-level input{
+    margin-right:7em;  /* space on the right */
+}
+/* Space after each checkbox so the options are spread out */
+.intrests input{
+    margin-right:6em;  /* space on the right */
+}
+/* Agreement checkbox area */
+.confirm-info{
+    margin:20px;  /* space outside the element */
+    font-size: larger;  /* text size */
+}
+/* Centers the submit button */
+.submit-btn{
+    text-align: center;  /* horizontal alignment of the text */
+    margin-bottom: 10px;  /* space below */
+}
+/* SUBMIT BUTTON: pink button with rounded corners */
+.submit-btn input{
+    border:2px solid var(--primary);  /* border line around the element */
+    border-radius: 10px;  /* rounded corners */
+    padding:20px;  /* space inside the element */
+    background-color: var(--primary);  /* background color */
+    color:var(--dark);  /* text color */
+    font-size: larger;  /* text size */
+    
+}
+/* HOVER: button becomes transparent with pink text */
+.submit-btn input:hover {
+    background-color: transparent;  /* background color */
+    color: var(--primary);  /* text color */
+}

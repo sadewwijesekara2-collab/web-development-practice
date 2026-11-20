@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head id="head">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration and Ticket Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    
+
+</head>
+<body>
+        <h1 class="site-title">Event Registration and Ticket Calculator</h1><hr>
+    <form>
+        <div class="personal_info">
+            <fieldset>
+                <legend>Personal Info</legend>
+
+                <div class="input-tile">
+                    <label for="fname">Full Name : </label>
+                    <input type="text" name="fname" id="fname"><br>
+                    <span class="error-msg" id="error-msg-name"></span>
+                </div>
+                <div class="input-tile">    
+                    <label for="e-mail">E-Mail Address : </label>
+                    <input type="email" name="e-mail" id="e-mail"><br>
+                    <span class="error-msg" id="error-msg-email"></span>
+                </div>
+                <div class="input-tile">
+                    <label for="phone_number">Phone Number : </label>
+                    <input type="tel" name="phone_number" id="phone_number"><br>
+                    <span class="error-msg" id="error-msg-phone"></span>
+                </div>
+            </fieldset>
+        </div>
+        <div class="ticket_details">
+            <fieldset>
+                <legend>Ticket Details</legend>
+
+                <div class="input-tile">
+                    <label for="ticket_type">Ticket Type : </label>
+                    <select name="ticket_type" id="ticket_type"> 
+                        <option value="">=====Select Ticket Type======</option>
+                        <option value="student">Student</option>
+                        <option value="regular">Regular</option>
+                        <option value="vip">VIP</option>
+                    </select><br>
+                    <span class="error-msg" id="error-msg-ticket"></span>
+                </div>    
+                <div class="input-tile">
+                    <label for="quantity">Quantity : </label>
+                    <input type="number" name="quantity" id="quantity">
+                    <span class="error-msg" id="error-msg-qty"></span>
+                </div>    
+            </fieldset>
+        </div>
+        <div class="booking_summery">
+            <!-- <fieldset >
+                <legend>Booking Summery</legend>
+                <p>
+                    Name : <br>
+                    E-Mail : <br>
+                    Phone Number : <br>
+                    Ticket Type :    Price : Rs..00<br>
+                    Quantity : <br>
+                    Total : <br>
+                </p>    
+            </fieldset> -->
+
+        </div>
+        <div class="button_section">
+            <button class="buttons" id="verify_button">Verify Details</button><br>
+            <button class="buttons" id="submit_button" disabled>Register</button>
+        </div>
+       
+    </form>
+    
+</body>
+</html>
