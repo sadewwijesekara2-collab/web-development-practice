@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technology Club 2026</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1 class="siteTitle">Technology Club Registration</h1>
+
+    <form>
+        <div class="informationSection">
+            <div class="inputTile" id="nameSection">
+                <label for="fname">Full Name : </label>
+                <input type="text" name="fname" id="fname">
+                <span id="nameError"></span>
+            </div>
+            <div class="inputTile" id="activitySection">
+                <label for="activity">Activity : </label>
+                <select name="activty" id="activity">
+                    <option value="">==========Select an Activity==========</option>
+                    <option value="1">Coding</option>
+                    <option value="2">Robotics</option>
+                    <option value="3">Web Design</option>
+                    <option value="4">AI</option>
+                </select>
+                <span id="activityError"></span>
+            </div>
+        </div>   
+        
+        <div  id="RegisterButton">
+            <button class="buttons" type="submit" id="registerStudentButton" >Register Student</button>
+        </div>
+        
+    </form>
+    <div id="priorityButton">
+        <button id="priorityRegisterButton" class="buttons">Priority Register</button>
+    </div>
+    <div id="registeredStudents">
+        <h1>Registered Students</h1>
+        <ol id="registeredStudentsList">
+            
+        </ol>
+    </div>
+    <div id="totalStudents">
+        <h2>Total Students</h2>
+        <p id="totalCount">0</p>
+    </div>
+    <div class="removeButtons">
+        <button class="buttons" id="removeFirstButton">Remove First</button>
+        <button class="buttons" id="removeLastButton">Remove Last</button>
+    </div>
+    <div class="searchSection">
+        <div class="inputTile" id="search">
+            <label for="searchingName">Name : </label>
+            <input type="text" id="searchingName" name="searchingName">
+            <span id="searchNameError"></span>
+        </div>
+        
+        <div class="searchResultSection">
+            <fieldset>
+                <legend>Results</legend>
+                <ul id="searchResult">
+                    
+                </ul>
+            </fieldset>
+        </div>
+    </div>
+    <div id="serachButtonSection">
+        <button class="buttons" id="searchButton">Search Now</button>
+    </div>
+    
+</body>
+</html>
