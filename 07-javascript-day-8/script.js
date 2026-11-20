@@ -55,10 +55,10 @@ function errorFind(name,activityNumber){
     nameError.textContent = "";
     activityError.textContent = "";
 
-    if(name == ""){
+    if(name === ""){
         nameError.textContent = '*enter the name';
     }
-    if(activityNumber == ""){
+    if(activityNumber === ""){
         activityError.textContent = '*select the activity';
     }
 }
